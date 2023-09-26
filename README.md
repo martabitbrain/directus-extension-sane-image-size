@@ -14,7 +14,7 @@ This extension is based on [Christian Fuss example](https://github.com/directus/
     ```bash
     # These are the default values if the env variables are not specified
     EXTENSIONS_SANE_IMAGE_SIZE_UPLOAD_QUALITY=90
-    EXTENSIONS_SANE_IMAGE_SIZE_MAXSIZE=1090
+    EXTENSIONS_SANE_IMAGE_SIZE_MAXSIZE=1920
     ``` 
 3. Reload your directus process. The Following message should appear:
     ```log
