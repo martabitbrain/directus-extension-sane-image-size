@@ -4,7 +4,7 @@ This extension modifies big images on upload to a preset maximum (width, height 
 
 This extension is based on [Christian Fuss example](https://github.com/directus/directus/discussions/8704#discussioncomment-2820302) with some minor tweaks to it:
 
-- Make it work with current Directus version (^10.1.0)
+- Make it work with current Directus version (^10.8.3)
 - Fix the return value of `getTransformation` function to make it compatible with current `getAsset` implementation.
 
 ## Installation
