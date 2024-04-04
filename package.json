@@ -2,26 +2,31 @@
 	"name": "directus-extension-sane-image-size",
 	"description": "This extension modifies big images on upload to a preset maximum (width, height & quality).",
 	"icon": "extension",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"keywords": [
 		"directus",
 		"directus-extension",
-		"directus-custom-hook"
+		"directus-custom-hook",
+		"image"
 	],
 	"license": "MIT",
 	"type": "module",
+	"files": [
+		"dist",
+		"README.md"
+	],
 	"directus:extension": {
-		"type": "hook",
-		"path": "index.js",
+    "type": "hook",
+		"path": "dist/index.js",
 		"source": "src/index.js",
-		"host": "^10.8.3"
-	},
+		"host": "^10.3.3"
+  },
 	"scripts": {
 		"build": "directus-extension build",
 		"dev": "directus-extension build -w --no-minify",
 		"link": "directus-extension link"
 	},
 	"devDependencies": {
-		"@directus/extensions-sdk": "^10.3.0"
+		"@directus/extensions-sdk": "11.0.2"
 	}
 }
