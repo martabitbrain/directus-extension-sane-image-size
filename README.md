@@ -1,6 +1,6 @@
-# Directus extension: Sane Image Size
+# Sane Image Size
 
-This extension modifies big images on upload to a preset maximum (width, height & quality).
+This Directus extension modifies big images on upload to a preset maximum (width, height & quality).
 
 This extension is based on [Christian Fuss example](https://github.com/directus/directus/discussions/8704#discussioncomment-2820302) with some minor tweaks to it:
 
