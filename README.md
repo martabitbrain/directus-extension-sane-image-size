@@ -10,7 +10,8 @@ This extension is based on [Christian Fuss example](https://github.com/directus/
 ## Installation
 
 1. There are now several ways to install this extension on your Directus instance (local or managed).
-    - Clone this repo inside your `extensions` Directus directory.
+    - Clone (and build) this repo inside your `extensions` Directus directory.
+    - Install into your project via npm.
     - Install via Directus Marketplace.
 2. If desired, edit the .env file of your Directus installation to set the environment variables:
     ```bash
