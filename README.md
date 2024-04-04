@@ -9,7 +9,9 @@ This extension is based on [Christian Fuss example](https://github.com/directus/
 
 ## Installation
 
-1. Clone this repo inside your `extensions/hooks` Directus directory or simply copy the package.json file and the root index.js file into a folder named directus-extension-sane-image-size.
+1. There are now several ways to install this extension on your Directus instance (local or managed).
+    - Clone this repo inside your `extensions` Directus directory.
+    - Install via Directus Marketplace.
 2. If desired, edit the .env file of your Directus installation to set the environment variables:
     ```bash
     # These are the default values if the env variables are not specified
