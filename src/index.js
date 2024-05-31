@@ -16,17 +16,20 @@ export default defineHook(({ action }, { services, logger, env }) => {
         const { stream, stat } = await assets.getAsset(key, transformation);
         if (stat.size < payload.filesize) {
           await sleep(4000);
+
+          // Check for existing thumbnails
           delete payload.width;
           delete payload.height;
           delete payload.size;
 
-          await files.uploadOne(
+          files.uploadOne(
             stream,
             {
               ...payload,
               optimized: true,
             },
-            key
+            key,
+            { emitEvents: false }
           );
         }
       }
@@ -38,7 +41,7 @@ function getTransformation(type, quality, maxSize) {
   const format = type.split("/")[1] ?? "";
   if (["jpg", "jpeg", "png", "webp"].includes(format)) {
     const transforms = [["withMetadata"]];
-    if (format === "jpeg" || format === 'jpg') {
+    if (format === "jpeg" || format === "jpg") {
       transforms.push([format, { progressive: true }]);
     }
     return {
