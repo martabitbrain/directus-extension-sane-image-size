@@ -10,9 +10,9 @@ This extension is based on [Christian Fuss example](https://github.com/directus/
 ## Installation
 
 1. There are now several ways to install this extension on your Directus instance (local or managed).
+    - Install via Directus Marketplace (if available).
     - Clone (and build) this repo inside your `extensions` Directus directory.
     - Install into your project via npm.
-    - Install via Directus Marketplace.
 2. If desired, edit the .env file of your Directus installation to set the environment variables:
     ```bash
     # These are the default values if the env variables are not specified
@@ -25,4 +25,15 @@ This extension is based on [Christian Fuss example](https://github.com/directus/
     ```
 
 ## Known issues
+
+### Preview not optimized
+
 Since the `files.upload` event is async, you will not see the new image size right away on the content edition interface. If you save the content and reload, you will see the image with the updated file size and dimensions.
+
+### Image is too large to be transformed, or image size couldn't be determined
+
+Check your image is not bigger than the default value specified at `ASSETS_TRANSFORM_IMAGE_MAX_DIMENSION` (See https://docs.directus.io/self-hosted/config-options.html#assets). If you need to handle files bigger than that value, please update your .env file accordingly.
+
+### Can I specify the target filesize instead of the target size?
+
+Sharp library (the one used by Directus to handle the images) does not support that feature. The only way could be trying several optimization configurations until the desired size is reached but that is time-consuming and this extension might not be the best place to do so. 
