@@ -2,7 +2,7 @@
 	"name": "directus-extension-sane-image-size",
 	"description": "This extension modifies big images after upload to a preset maximum (width, height & quality).",
 	"icon": "Image",
-	"version": "1.1.7",
+	"version": "1.1.8",
 	"keywords": [
 		"directus",
 		"directus-extension",
